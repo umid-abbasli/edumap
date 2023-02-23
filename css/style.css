@@ -1374,7 +1374,7 @@ li {
 }
 .static-right-side-head a {
   color: #6f757e;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   display: flex;
   column-gap: 5px;
@@ -1598,7 +1598,7 @@ li {
     line-height: 22px;
 }
 .static-page-content-right-side {
-  width: 250px;
+  width: 290px;
 }
 .static-page-soisal-box {
   background: #f4fbff;
