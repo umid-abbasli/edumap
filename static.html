@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="/css/mybootstrap.css">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>edumap</title>
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"
+    integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- header section width hamburger menu -->
     <section>
         <div class="header-1-all">
             <div class="container">
@@ -50,15 +56,17 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="position-sticky">
         <div class="header-2-all">
             <div class="container">
                 <div class="header-2">
                     <div class="logo-navigation">
                         <div class="logo">
-                            <a href=""><img src="/img/edumaplogo.png" alt=""></a>
+                            <a href="index.html"><img src="/img/edumaplogo.png" alt=""></a>
                         </div>
                         <ul class="navigation-header-2">
-                            <li><a href="/static.html">Vakansiyalar</a></li>
+                            <li><a href="static.html" class="active-navigation">Vakansiyalar</a></li>
                             <li><a href="">Təcrübə proqramları</a></li>
                             <li><a href="">Könüllülük</a></li>
                             <li><a href="">Təqaüdlər</a></li>
@@ -71,21 +79,26 @@
                                     <span>
                                         Digərləri <svg width="10" height="5" viewBox="0 0 10 5" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" class="bl">
-                                            <path d="M0 0L5 5L10 0H0Z" fill="#0E0E0E"></path>
+                                            <path d="M0 0L5 5L10 0H0Z" fill="#fff"></path>
                                         </svg>
                                     </span>
                                     <div class="dropdown-content">
-                                        <ul>
-                                            <li><a href="">Özəl Elanlar</a></li>
-                                            <li><a href="">Mədəniyyət</a></li>
-                                            <li><a href="">Konfranslar</a></li>
-                                            <li><a href="">Sərgilər</a></li>
-                                            <li><a href="">Seminarlar</a></li>
-                                            <li><a href="">Kurslar</a></li>
-                                            <li><a href="">Həftəlik</a></li>
-                                            <li><a href="">Maraqlı</a></li>
-                                            <li><a href="">Müsabiqələr</a></li>
-                                        </ul>
+                                        <div class="dropdown-con">
+                                            <ul>
+                                                <li><a href="">Özəl Elanlar</a></li>
+                                                <li><a href="">Mədəniyyət</a></li>
+                                                <li><a href="">Konfranslar</a></li>
+                                                <li><a href="">Sərgilər</a></li>
+                                                <li><a href="">Seminarlar</a></li>
+                                                <li><a href="">Kurslar</a></li>
+                                                <li><a href="">Həftəlik</a></li>
+                                                <li><a href="">Maraqlı</a></li>
+                                                <li><a href="">Müsabiqələr</a></li>
+                                                <li><a href="">Təlimlər</a></li>
+                                                <li><a href="">Təqaüdlər</a></li>
+                                            </ul>
+                                            <img src="/img/plain-triangle.png" class="dropdown-triangle" alt="">
+                                        </div>
                                     </div>
                                 </li>
                             </div>
@@ -94,6 +107,7 @@
                     <div class="header-2-search-hamburger">
                         <div class="header-2-search">
                             <img src="/img/search-icon-2.png" class="" alt="search-icon">
+                            <i class="fa-solid fa-x d-none"></i>
                         </div>
                         <div class="hamburger-header-2">
                             <span></span>
@@ -116,28 +130,38 @@
                         <li><a href="">Həftəlik</a></li>
                         <li class="hambuger-accordion">Digərləri <svg width="10" height="5" viewBox="0 0 10 5"
                                 fill="none" xmlns="http://www.w3.org/2000/svg" class="bl">
-                                <path d="M0 0L5 5L10 0H0Z" fill="#0e0e0e"></path>
+                                <path d="M0 0L5 5L10 0H0Z" fill="#fff"></path>
                             </svg></li>
                         <div class="hamburger-accordion-content">
-                            <li><a href="">dropdown-1</a></li>
-                            <li><a href="">dropdown-2</a></li>
+                            <li><a href="">Özəl Elanlar</a></li>
+                            <li><a href="">Mədəniyyət</a></li>
+                            <li><a href="">Konfranslar</a></li>
+                            <li><a href="">Sərgilər</a></li>
+                            <li><a href="">Seminarlar</a></li>
+                            <li><a href="">Kurslar</a></li>
                         </div>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="header-search-section">
-            <h3>SAYT ÜZRƏ AXTARIŞ</h3>
-            <form class="d-flex">
-                <input type="text" id="search-input" placeholder="Axtar"><button id="search-button">Axtar</button>
-            </form>
+        <div class="seacrh-section-bg">
+            <div class="container">
+                <div class="header-search-section">
+                    <h3>SAYT ÜZRƏ AXTARIŞ</h3>
+                    <form class="d-flex">
+                        <input type="text" id="search-input" placeholder="Axtar"><button
+                            id="search-button">Axtar</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- header section end  -->
     <section>
         <div class="static-head-bg">
             <div class="container">
                 <div class="static-head">
-                    <div class="static-left-side">
+                    <!-- <div class="static-left-side">
                         <div class="static-left-side-logo">
                             <a href="" class="static-page-back">
                                 <i class="fa-solid fa-chevron-left"></i>
@@ -158,33 +182,33 @@
                             <a href=""><i class="fa-regular fa-heart"></i></A>
                         </div>
                       
-                    </div>
+                    </div> -->
                     <div class="static-right-side">
                         <div class="static-head-name">
                             <h4>Ofis Menecer</h4>
                             <span><i class="fa-regular fa-clock"></i>Deadline 27 Fevral 2023</span>
                             <a href="http://">Inzibati, Biznes və İdarəetmə</a>
                         </div>
-                        <a href="" class="static-right-side-button">
+                        <!-- <a href="" class="static-right-side-button">
                             <svg xmlns="http://www.w3.org/2000/svg" >
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 14L6.462 0 0 14l6.462-3.23L14 14z" fill="#fff"></path>
                             </svg> Müraciət et
-                        </a>
-                        <div class="static-page-right-side-responsive-links">
+                        </a> -->
+                        <!-- <div class="static-page-right-side-responsive-links">
                             <a href=""><i class="fa-regular fa-flag"></i></a>
                             <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18"> <path d="M4 0v4H3C1.35 4 0 5.35 0 7v7h4v4h12v-4h4V7c0-1.65-1.35-3-3-3h-1V0H4zm2 2h8v2H6V2zM3 6h14a1 1 0 011 1v5h-2v-2H4v2H2V7a1 1 0 011-1zm13 1a1 1 0 100 2 1 1 0 000-2zM6 12h8v4H6v-4z" fill="#6F757E"></path> </svg></a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="static-pages-navigation">
                         <ul>
-                            <li class="active-static-pages-navigation"><a href="">İşin təsviri</a></li>
+                            <li class="active-static-pages-navigation"><a href="index.html">Ana səhifə</a></li>
                             <li><a href="Şirkət haqqında">Şirkət haqqında</a></li>
-                            <li><a href="">Digər vakansiyalar</a></li>
+                            <!-- <li><a href="">Digər vakansiyalar</a></li> -->
                         </ul>
-                        <div class="static-right-side-links">
+                        <!-- <div class="static-right-side-links">
                             <a href=""><i class="fa-regular fa-flag"></i><span>Şikayət et</span></a><span class="static-right-side-links-line" ></span>
                             <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18"> <path d="M4 0v4H3C1.35 4 0 5.35 0 7v7h4v4h12v-4h4V7c0-1.65-1.35-3-3-3h-1V0H4zm2 2h8v2H6V2zM3 6h14a1 1 0 011 1v5h-2v-2H4v2H2V7a1 1 0 011-1zm13 1a1 1 0 100 2 1 1 0 000-2zM6 12h8v4H6v-4z" fill="#6F757E"></path> </svg> <span>Çap et</span></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -193,7 +217,7 @@
     <section>
         <div class="container">
             <div class="static-page-content">
-                <div class="static-page-content-left-side col-md-5">
+                <div class="static-page-content-left-side col-md-12">
                     <h3>Namizədə olan tələblər:</h3>
                     <ul>
                         <li>Lorem ipsum dolor sit amet.</li>
@@ -240,7 +264,7 @@
                     </ul>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima ex excepturi assumenda, pariatur molestias voluptatibus magnam! Officiis libero itaque aut? Ipsam vero ratione minus soluta vel blanditiis, eum nisi deleniti!</p>
                 </div>
-                <div class="static-page-content-right-side">
+                <!-- <div class="static-page-content-right-side">
                     <div class="static-page-soisal-box">
                         <img src="https://classic.jobsearch.az/simple/images/svg-icons/telegram.svg" alt="sosial">
                         <p>Lorem ipsum dolor, sit amet consectetur <a href="">adipisicing</a> elit. Natus, sed.</p>
@@ -259,14 +283,56 @@
                             <p>1350</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
+      <!-- footer -->
+      <section>
+        <footer>
+            <div class="footer-section">
+                <div class="container">
+                    <div class="footer-up">
+                        <div class="footer-logo">
+                            <a href=""><img src="/img/edumaplogo.png" alt=""></a>
+                        </div>
+                        <ul class="footer-navigation">
+                            <li><a href="">Vakansiyalar</a></li>
+                            <li><a href="">Təcrübə proqramları</a></li>
+                            <li><a href="">Könüllülük</a></li>
+                            <li><a href="">Təqaüdlər</a></li>
+                            <li><a href="">Həftəlik</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-down">
+                        <div class="footer-down-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptatem itaque dolor
+                                quisquam ut fugit provident nemo quasi veniam reprehenderit debitis quidem consectetur,
+                                harum, autem libero praesentium. Vitae, quo molestiae?</p>
+                        </div>
+                        <div class="footer-down-icons">
+                            <a href="https://www.facebook.com/edumap.az" target="_blank"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/edumap.az" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.twitter.com/edumapaz" target="_blank"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/edumap-az" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://t.me/edumapazz" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <!-- footer end -->
 
 
 
+    <script src="/js/mybootstrap.js"></script>
     <script src="/js/myfontawasome.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

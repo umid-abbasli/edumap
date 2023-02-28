@@ -222,14 +222,14 @@
   left: 40px;
   top: -50%;
   transform: translateY(-50%);
-  box-shadow: -1px 1px 57px -14px rgba(0,0,0,0.75);
+  box-shadow: -1px 1px 57px 0px rgba(0,0,0,0.75);
 }
 #conference .owl-nav .owl-next {
   position: absolute;
   right: 40px;
   top: -50%;
   transform: translateY(-50%);
-  box-shadow: -1px 1px 57px -14px rgba(0,0,0,0.75);
+  box-shadow: -1px 1px 57px 0px rgba(0,0,0,0.75);
 }
 #conference .owl-nav button img, #news button img {
   opacity: .4;
@@ -245,6 +245,7 @@
 }
 #conference .owl-item {
   position: relative;
+  max-height: 291px;
 }
 #conference .owl-item:hover {
   color: #000;
@@ -260,14 +261,13 @@
   border-top: 1px solid #383838;
 }
 #conference .owl-item p{
-  font-size: 22px;
   font-family: var(--fontSemi);
   margin-top: 20px;
 }
 #conference .owl-item .owl-item-bg {
   position: relative;
 }
-#conference .owl-item .owl-item-bg::after {
+#conference .owl-item::after {
   position: absolute;
   content: "";
   height: 100%;
@@ -278,7 +278,6 @@
   background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .7));
   z-index: 1;
   transition: all .3s;
-  border-radius: 6px;
 }
 
 #conference .owl-item:hover .owl-item-bg::after {
