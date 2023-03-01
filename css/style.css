@@ -652,7 +652,7 @@ li {
   row-gap: 90px;
 }
 .section-4-left-side {
-  width: 48%;
+  width: 49%;
 }
 .section-4-left-side-head {
   display: flex;
@@ -739,18 +739,27 @@ li {
 .section-4-card-logo img {
   width: 100%;
   object-fit: cover;
+  width: 40px;
+  height: 40px;
 }
 .section-4-card-name h3 {
   font-size: 16px;
   font-family: "em-medium";
   color: #000;
   margin: 0 0 2px 0;
+  width: 340px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .section-4-card-name p {
   color: rgba(0, 0, 0, 0.5);
   font-size: 13px;
   font-family: "em-medium";
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .section-4-card-info {
   display: flex;
@@ -784,16 +793,36 @@ li {
   min-width: 6.2rem;
 } */
 /* section-4-responsive */
+@media only screen and (max-width:1406px){
+  .section-4-card-name h3 {
+    width: 220px;
+  }
+}
+@media only screen and (max-width:1220px){
+  .section-4-card-name h3 {
+    width: 150px;
+  }
+}
 @media only screen and (max-width: 992px) {
   .section-4-left-side {
     width: 100%;
+  }
+  .section-4-card-name h3 {
+    width: 330px;
   }
 }
 @media only screen and (max-width: 750px) {
   .section-4-all-sides .section-4-card:not(:nth-child(n + 6))::after {
     right: 20px;
   }
+  .section-4-card-name h3 {
+    width: 170px;
+  }
+  .section-4-card-name p {
+    width: 160px;
+  }
 }
+
 @media only screen and (max-width: 602px) {
   .section-4-cards {
     max-height: 60vh;
@@ -802,12 +831,43 @@ li {
     right: 20px;
   }
 }
-
-@media only screen and (max-width: 395px) {
+@media only screen and (max-width: 500px) {
+  .section-4-all-sides .section-4-card:not(:nth-child(n + 6))::after {
+    right: 20px;
+  }
+  .section-4-card-name h3 {
+    width: 150px;
+  }
+  .section-4-card-name p {
+    width: 140px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .section-4-card-name h3 {
+    width: 100%;
+    max-width: 200px;
+  }
+  .section-4-card-name p {
+    width: 100%;
+  }
+  .section-4-card-logo-name{
+    width: 100%;
+    justify-content: center;
+  }
   .section-4-card {
     justify-content: center;
     gap: 20px;
     padding: 20px 0;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .section-4-card-name h3 {
+    width: 100%;
+    max-width: 160px;
+  }
+  .section-4-card-name p {
+    width: 100%;
+    max-width: 160px;
   }
 }
 
