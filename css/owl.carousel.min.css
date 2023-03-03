@@ -186,9 +186,9 @@
 /* owl carousel - tedbir ve konfranslar*/
 
 #conference .owl-item img {
-  border-radius: 6px;
+  border-radius: 6px 6px 0 0;
   object-fit: cover;
-  height: 290px;
+  height: 176px;
 }
 
 #conference .owl-carousel  {
@@ -245,7 +245,11 @@
 }
 #conference .owl-item {
   position: relative;
-  max-height: 291px;
+  height: 290px;
+  transition: .2s;
+}
+#conference .owl-item:hover{
+  opacity: 0.8;
 }
 #conference .owl-item:hover {
   color: #000;
@@ -267,7 +271,7 @@
 #conference .owl-item .owl-item-bg {
   position: relative;
 }
-#conference .owl-item::after {
+/* #conference .owl-item::after {
   position: absolute;
   content: "";
   height: 100%;
@@ -278,7 +282,7 @@
   background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .7));
   z-index: 1;
   transition: all .3s;
-}
+} */
 
 #conference .owl-item:hover .owl-item-bg::after {
   height: 320px;
