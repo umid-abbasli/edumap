@@ -249,10 +249,10 @@
   transition: .2s;
 }
 #conference .owl-item:hover{
-  opacity: 0.8;
+  opacity: 0.8 !important;
 }
 #conference .owl-item:hover {
-  color: #000;
+  color: #000 !important;
 }
 #conference .owl-item .date {
   position: absolute;
@@ -285,7 +285,7 @@
 } */
 
 #conference .owl-item:hover .owl-item-bg::after {
-  height: 320px;
+  height: 320px !important;
 }
 .owl-stage{
 }

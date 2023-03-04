@@ -2188,6 +2188,9 @@
 
 
         function callback() {
+            $("#conference .owl-item").mouseover(function(){
+                $("#conference .owl-item").css({"opacity":"0.8"})
+            })
             for (let i = 0; i < $(".owl-stage").children().length; i++) {
                 if ($("#conference .owl-item").eq(i).hasClass("active")) {
                     $("#conference .owl-item").eq(i).css({
