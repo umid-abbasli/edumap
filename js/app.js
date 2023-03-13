@@ -10,10 +10,7 @@ $(document).ready(function () {
       "hamburger-header-1-animated-1"
     );
     $(".hamburger-header-1 span:nth-child(2)").toggleClass(
-      "hamburger-header-1-animated"
-    );
-    $(".hamburger-header-1 span:nth-child(3)").toggleClass(
-      "hamburger-header-1-animated-2"
+      "hamburger-header-1-animated-first"
     );
     $(".hamburger-menu").slideToggle();
   });
@@ -23,9 +20,6 @@ $(document).ready(function () {
     );
     $(".hamburger-header-2 span:nth-child(2)").toggleClass(
       "hamburger-header-1-animated"
-    );
-    $(".hamburger-header-2 span:nth-child(3)").toggleClass(
-      "hamburger-header-1-animated-2"
     );
     $(".hamburger-menu-2").slideToggle();
   });

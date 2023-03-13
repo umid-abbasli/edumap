@@ -27,7 +27,6 @@
                     <div class="hamburger-header-1">
                         <span></span>
                         <span></span>
-                        <span></span>
                     </div>
                     <ul class="navigation-header-1">
                         <li><a href="">Haqqımızda</a></li>
@@ -87,7 +86,7 @@
                                     <div class="dropdown-content">
                                         <div class="dropdown-con">
                                             <ul>
-                                                <li><a href="">Özəl Elanlar</a></li>
+                                                <li><a href="/categories.html">Özəl Elanlar</a></li>
                                                 <li><a href="">Mədəniyyət</a></li>
                                                 <li><a href="">Konfranslar</a></li>
                                                 <li><a href="">Sərgilər</a></li>
@@ -112,7 +111,6 @@
                             <i class="fa-solid fa-x d-none"></i>
                         </div>
                         <div class="hamburger-header-2">
-                            <span></span>
                             <span></span>
                             <span></span>
                         </div>
@@ -934,7 +932,7 @@
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="owl-carousel owl-theme owl-loaded">
+            <div class="owl-carousel owl-carousel1 owl-theme owl-loaded">
                 <div class="owl-stage-outer">
                     <div class="owl-stage">
                         <a href="/" class="owl-item">
@@ -1317,7 +1315,7 @@
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="owl-carousel owl-theme owl-loaded">
+            <div class="owl-carousel owl-carousel2 owl-theme owl-loaded">
                 <div class="owl-stage-outer">
                     <div class="owl-stage">
                         <a href="/" class="owl-item">
@@ -2152,7 +2150,7 @@
         });
     </script>
     <script>
-        $("#conference .owl-carousel").owlCarousel({
+        $("#conference .owl-carousel1").owlCarousel({
             loop: false,
             margin: 30,
             nav: true,
@@ -2188,6 +2186,58 @@
 
 
         function callback() {
+            $("#conference .owl-item").mouseover(function(){
+                $("#conference .owl-item").css({"opacity":"0.8"})
+            })
+            for (let i = 0; i < $(".owl-stage").children().length; i++) {
+                if ($("#conference .owl-item").eq(i).hasClass("active")) {
+                    $("#conference .owl-item").eq(i).css({
+                        opacity: "1"
+                    })
+                }
+                else {
+                    $("#conference .owl-item").eq(i).css({
+                        opacity: ".6"
+                    })
+                }
+            }
+        }
+
+        $("#conference .owl-carousel2").owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: true,
+            // center: true,
+            responsiveClass: true,
+            navText: ["<img src='img/left.png' />", "<img src='img/right.png' />"],
+            dots: false,
+            onDragged: callback2,
+            responsive: {
+                0: {
+                    items: 1,
+                    stagePadding: 20
+                },
+                600: {
+                    items: 2,
+                    stagePadding: 60
+                },
+                1000: {
+                    items: 3,
+                    stagePadding: 70
+                },
+                1200: {
+                    items: 4,
+                    stagePadding: 70
+                },
+                1300: {
+                    items: 5,
+                    stagePadding: 70
+                },
+            },
+        });
+
+
+        function callback2() {
             $("#conference .owl-item").mouseover(function(){
                 $("#conference .owl-item").css({"opacity":"0.8"})
             })
@@ -2247,6 +2297,7 @@
             }
 
         }
+        
     </script>
 </body>
 

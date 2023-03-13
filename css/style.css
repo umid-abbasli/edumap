@@ -278,6 +278,8 @@ li {
 .hamburger-menu-2 {
   display: none;
   margin: 15px 0;
+  overflow-y: auto;
+  max-height: 75vh;
 }
 /* header responsive */
 @media only screen and (max-width: 1350px) {
@@ -411,7 +413,10 @@ li {
   .hamburger-header-1,
   .hamburger-header-2 {
     cursor: pointer;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
   }
   .hamburger-header-1 span{
     background: #fff;
@@ -420,7 +425,7 @@ li {
   .hamburger-header-2 span {
     height: 2px;
     width: 25px;
-    display: flex;
+    display: inline-flex;
     transition: 0.4s;
     cursor: pointer;
   }
@@ -429,26 +434,13 @@ li {
   }
   .navigation-header-1-hamburger li{
     color: #fff;
-    line-height: 25px;
+    line-height: 34px;
   }
-  .hamburger-header-1 span:nth-child(1),
-  .hamburger-header-2 span:nth-child(1) {
-    transform: translateY(-4px);
-  }
-  .hamburger-header-1 span:nth-child(3),
-  .hamburger-header-2 span:nth-child(3) {
-    transform: translateY(4px);
-  }
-  .hamburger-header-1-animated-1 {
-    transform: rotate(45deg) translateY(2.5px) !important;
-  }
+ .hamburger-header-1-animated-first{
+  background:  #000 !important;
+ }
   .hamburger-header-1-animated {
-    width: 0;
-    margin: 0 auto;
-    opacity: 0;
-  }
-  .hamburger-header-1-animated-2 {
-    transform: rotate(-45deg) translateY(-2.5px) translateY(-1px) !important;
+    background: #fff !important;
   }
   .header-2-search-hamburger {
     display: flex;
@@ -467,7 +459,7 @@ li {
   .navigation-header-2-hamburger li a {
     color: #fff;
     display: block;
-    margin: 21px 0 0 0;
+    margin: 31px 0 0 0;
     transition: 0.3s;
     font-size: 18px;
     cursor: pointer;
