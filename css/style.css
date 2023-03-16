@@ -281,6 +281,10 @@ li {
   overflow-y: auto;
   max-height: 75vh;
 }
+
+.hamburger-accordion-content{
+  padding: 0 0 0 25px;
+}
 /* header responsive */
 @media only screen and (max-width: 1350px) {
   .navigation-header-2 li {
@@ -1913,6 +1917,16 @@ li {
 }
 .static-page-content-right-side {
   width: 290px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.full-story-right-side-reklam{
+  min-height: 380px;
+}
+.full-story-right-side-reklam a img{
+  height: 380px;
+  object-fit: cover;
 }
 /* .static-page-soisal-box {
   background: #f4fbff;
